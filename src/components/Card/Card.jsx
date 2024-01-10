@@ -17,11 +17,21 @@ function Card() {
         console.log("Test");
         setMyName('JESSICA');
     }
+
+    //             let count = 0;
+    const [ count, setCount] = useState(0);
+
+    function increaseCounter() {
+        //count += 1;
+        setCount(count +1);
+        console.log("count: ", count);
+    }
     
     return (
     <div className="card">
-        {/* Create state to increment the count*/}
-        <button>count is 0</button>
+        {/* Assignment: Create state to increment the count*/}
+
+        <button onClick = {increaseCounter}>The count is: {count}</button>
             <p>{myName}</p>
             <button onClick={clickChangeName}>Change Name</button>
             <p>
